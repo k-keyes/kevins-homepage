@@ -9,10 +9,25 @@ body {
     max-width: 666px;
     padding: 12px;
     margin: 24px auto;
+		position: relative;
     background-image: url("./background.png");
     background-size: contain;
     background-position: 0 0;
     background-repeat: no-repeat;
+}
+
+.jimmy-frame {
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	position: absolute;
+	top: 86px;
+	left: 172px;
+	background-size: cover;
+	background-position: center center;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .links-container {
