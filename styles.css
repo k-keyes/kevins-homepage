@@ -1,19 +1,21 @@
 body {
-    background-color: #ededed;
-    color: #272727;
-    font-family: 'Work Sans', sans-serif;
+	background-color: #ededed;
+	color: #272727;
+	font-family: 'Work Sans', sans-serif;
+
+	-webkit-backface-visibility: hidden;
 }
 
 .content-container {
-    width: 100%;
-    max-width: 666px;
-    padding: 12px;
-    margin: 24px auto;
-		position: relative;
-    background-image: url("./background.png");
-    background-size: contain;
-    background-position: 0 0;
-    background-repeat: no-repeat;
+	width: 100%;
+	max-width: 666px;
+	padding: 12px;
+	margin: 24px auto;
+	position: relative;
+	background-image: url("./background.png");
+	background-size: contain;
+	background-position: 0 0;
+	background-repeat: no-repeat;
 }
 
 .frames-container {
