@@ -2,8 +2,12 @@ body {
 	background-color: #ededed;
 	color: #272727;
 	font-family: 'Work Sans', sans-serif;
+}
 
-	-webkit-backface-visibility: hidden;
+.header {
+	font-size: 40px;
+  line-height: 1;
+  margin: 18px 0;
 }
 
 .content-container {
@@ -14,7 +18,7 @@ body {
 	margin: 24px auto;
 	position: relative;
 	background-image: url("./background.png");
-	background-size: contain;
+	background-size: 106%;
 	background-position: 0 0;
 	background-repeat: no-repeat;
 }
@@ -24,8 +28,8 @@ body {
 	height: 52px;
 	border-radius: 50%;
 	position: absolute;
-	top: 86px;
-	left: 182px;
+	top: 100px;
+	left: 208px;
 	overflow: hidden;
 
   -webkit-transition: all .5s ease-in-out;
