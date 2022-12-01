@@ -1,3 +1,5 @@
+const bgImageCount = 21;
+
 document.addEventListener('DOMContentLoaded', () => {
 	const startingActiveFrame = document.querySelector('.jimmy-frame.active');
 	updateJimmyImage(startingActiveFrame);
@@ -9,8 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
 const rotateActiveFrame = () => {
 	const activeFrame = document.querySelector('.jimmy-frame.active');
 	const inactiveFrame = document.querySelector('.jimmy-frame:not(.active)');
-	console.log(activeFrame);
-	console.log(inactiveFrame);
 	activeFrame.classList.remove('active');
 	inactiveFrame.classList.add('active');
 	updateJimmyImage(inactiveFrame);
@@ -22,5 +22,5 @@ const updateJimmyImage = (el) => {
 }
 
 const randomInRange = () => {
-	return Math.ceil(Math.random() * 21);
+	return Math.ceil(Math.random() * bgImageCount);
 }

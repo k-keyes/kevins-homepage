@@ -5,9 +5,11 @@ body {
 }
 
 .header {
+	position: relative;
+	z-index: 1;
 	font-size: 40px;
-  line-height: 1;
-  margin: 18px 0;
+	line-height: 1;
+	margin: 18px 0;
 }
 
 .content-container {
@@ -28,17 +30,18 @@ body {
 	height: 52px;
 	border-radius: 50%;
 	position: absolute;
-	top: 100px;
-	left: 208px;
+	top: 76px;
+	left: 133px;
 	overflow: hidden;
+	border: 1px solid white;
 
-  -webkit-transition: all .5s ease-in-out;
-  -moz-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-}
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
 
-.frames-container:hover {
-	scale: 1.3;
+	-webkit-animation: orbit 200s linear infinite;
+	-moz-animation: orbit 200s linear infinite;
+	animation: orbit 200s linear infinite;
 }
 
 .jimmy-frame {
@@ -48,9 +51,9 @@ body {
 	border-radius: 50%;
 	opacity: 0;
 
-  -webkit-transition: all .5s ease-in-out;
-  -moz-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
 }
 
 .jimmy-frame.active {
@@ -58,35 +61,71 @@ body {
 }
 
 .links-container {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
+	position: relative;
+	z-index: 1;
+	display: flex;
+	list-style-type: none;
+	padding: 0;
 }
 
 .link-item {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    border: 2px solid #272727;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    margin-right: 8px;
-    transition: .2s;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	border: 2px solid #272727;
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+	margin-right: 8px;
+	transition: .2s;
 }
 
 .link-item:hover {
-    background-color: #d4d3d3;
+	background-color: #d4d3d3;
 }
 
 .link-anchor {
-    width: 24px;
-    height: 24px;
-    margin: auto;
+	width: 24px;
+	height: 24px;
+	margin: auto;
 }
 
 .link-anchor svg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+:root {
+	--orbitDistance: 80px;
+}
+
+@-webkit-keyframes orbit {
+	from {
+		-webkit-transform: rotate(0deg) translateX(var(--orbitDistance)) rotate(0deg);
+	}
+
+	to {
+		-webkit-transform: rotate(360deg) translateX(var(--orbitDistance)) rotate(-360deg);
+	}
+}
+
+@-moz-keyframes orbit {
+	from {
+		-moz-transform: rotate(0deg) translateX(var(--orbitDistance)) rotate(0deg);
+	}
+
+	to {
+		-moz-transform: rotate(360deg) translateX(var(--orbitDistance)) rotate(-360deg);
+	}
+}
+
+@keyframes orbit {
+	from {
+		transform: rotate(0deg) translateX(var(--orbitDistance)) rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg) translateX(var(--orbitDistance)) rotate(-360deg);
+	}
 }
