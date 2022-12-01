@@ -7,8 +7,9 @@ body {
 }
 
 .content-container {
+	box-sizing: border-box;
 	width: 100%;
-	max-width: 666px;
+	max-width: 248px;
 	padding: 12px;
 	margin: 24px auto;
 	position: relative;
