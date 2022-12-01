@@ -16,18 +16,37 @@ body {
     background-repeat: no-repeat;
 }
 
-.jimmy-frame {
-	width: 64px;
-	height: 64px;
+.frames-container {
+	width: 52px;
+	height: 52px;
 	border-radius: 50%;
 	position: absolute;
 	top: 86px;
-	left: 172px;
-	background-size: cover;
-	background-position: center center;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+	left: 182px;
+	overflow: hidden;
+
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.frames-container:hover {
+	scale: 1.3;
+}
+
+.jimmy-frame {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.jimmy-frame.active {
+	opacity: 1;
 }
 
 .links-container {
