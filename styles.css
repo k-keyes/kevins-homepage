@@ -42,7 +42,7 @@ body {
 
 	-webkit-animation: orbit 200s linear infinite;
 	-moz-animation: orbit 200s linear infinite;
-	animation: orbit 20s linear infinite;
+	animation: orbit 200s linear infinite;
 }
 
 .jimmy-frame {
@@ -94,21 +94,41 @@ body {
 }
 
 @-webkit-keyframes orbit {
-	from {
+	0% {
 		-webkit-transform: rotate(0deg) translateX(var(--orbitDistance)) rotate(0deg);
+		opacity: 1;
 	}
 
-	to {
+	44% {
+		opacity: 0.7;
+		filter: brightness(150%);
+	}
+
+	85% {
+		opacity: 1;
+	}
+
+	100% {
 		-webkit-transform: rotate(360deg) translateX(var(--orbitDistance)) rotate(-360deg);
 	}
 }
 
 @-moz-keyframes orbit {
-	from {
+	0% {
 		-moz-transform: rotate(0deg) translateX(var(--orbitDistance)) rotate(0deg);
+		opacity: 1;
 	}
 
-	to {
+	44% {
+		opacity: 0.7;
+		filter: brightness(150%);
+	}
+
+	85% {
+		opacity: 1;
+	}
+
+	100% {
 		-moz-transform: rotate(360deg) translateX(var(--orbitDistance)) rotate(-360deg);
 	}
 }
