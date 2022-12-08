@@ -1,24 +1,15 @@
-const bgImageCount = 21;
+const bgImageCount = 13;
 
 document.addEventListener('DOMContentLoaded', () => {
-	const startingActiveFrame = document.querySelector('.jimmy-frame.active');
-	updateJimmyImage(startingActiveFrame);
-	setInterval(() => {
-		rotateActiveFrame(randomInRange());
-	}, 5000);
+	const jimmyFrame = document.querySelector('.jimmy-frame');
+	updateJimmyImage();
+	jimmyFrame.addEventListener('click', updateJimmyImage);
 });
 
-const rotateActiveFrame = () => {
-	const activeFrame = document.querySelector('.jimmy-frame.active');
-	const inactiveFrame = document.querySelector('.jimmy-frame:not(.active)');
-	activeFrame.classList.remove('active');
-	inactiveFrame.classList.add('active');
-	updateJimmyImage(inactiveFrame);
-}
-
-const updateJimmyImage = (el) => {
+const updateJimmyImage = () => {
+	const jimmyFrame = document.querySelector('.jimmy-frame');
 	const imageSource = `./jimmy-pics/jimmy${randomInRange()}.png`;
-	el.src = imageSource;
+	jimmyFrame.src = imageSource;
 }
 
 const randomInRange = () => {

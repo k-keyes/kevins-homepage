@@ -42,7 +42,7 @@ body {
 
 	-webkit-animation: orbit 200s linear infinite;
 	-moz-animation: orbit 200s linear infinite;
-	animation: orbit 200s linear infinite;
+	animation: orbit 20s linear infinite;
 }
 
 .jimmy-frame {
@@ -50,15 +50,6 @@ body {
 	width: 100%;
 	height: 100%;
 	border-radius: 50%;
-	opacity: 0;
-
-	-webkit-transition: all .5s ease-in-out;
-	-moz-transition: all .5s ease-in-out;
-	transition: all .5s ease-in-out;
-}
-
-.jimmy-frame.active {
-	opacity: 1;
 }
 
 .links-container {
@@ -123,11 +114,21 @@ body {
 }
 
 @keyframes orbit {
-	from {
+	0% {
 		transform: rotate(0deg) translateX(var(--orbitDistance)) rotate(0deg);
+		opacity: 1;
 	}
 
-	to {
+	44% {
+		opacity: 0.7;
+		filter: brightness(150%);
+	}
+
+	85% {
+		opacity: 1;
+	}
+
+	100% {
 		transform: rotate(360deg) translateX(var(--orbitDistance)) rotate(-360deg);
 	}
 }
