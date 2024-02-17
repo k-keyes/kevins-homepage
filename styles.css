@@ -1,91 +1,100 @@
 body {
-	background-color: rgba(237, 237, 237, 1);
-	color: var(--fontColor);
-	font-family: 'Work Sans', sans-serif;
+  background-color: #1b1926;
+  color: var(--fontColor);
+  font-family: "Work Sans", sans-serif;
 }
 
 .header {
-	position: relative;
-	z-index: 1;
-	font-size: 40px;
-	line-height: 1;
-	margin: 18px 0;
+  position: relative;
+  z-index: 1;
+  font-size: 40px;
+  line-height: 1;
+  margin: 18px 0;
 }
 
 .content-container {
-	box-sizing: border-box;
-	width: 100%;
-	max-width: 248px;
-	padding: 12px;
-	margin: 24px auto;
-	position: relative;
-	background-image: url("./background.png");
-	background-size: 106%;
-	background-position: 0 0;
-	background-repeat: no-repeat;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 248px;
+  padding: 12px;
+  margin: 24px auto;
+  position: relative;
+  background-image: url("./background.png");
+  background-size: 106%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
-.frames-container {
-	width: 52px;
-	height: 52px;
-	border-radius: 50%;
-	position: absolute;
-	z-index: 0;
-	top: 110px;
-	left: 202px;
-	overflow: hidden;
-	border: 1px solid rgba(255, 255, 255, 1);
-	background: rgba(255, 255, 255, 1);
+.image-frame {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 1);
 }
 
-.jimmy-frame {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
+.image-frame.goose {
+  top: 10px;
+  left: 182px;
+}
 
-	-webkit-transition: all .5s ease-in-out;
-	-moz-transition: all .5s ease-in-out;
-	transition: all .5s ease-in-out;
+.image-frame.jimmy {
+  top: 78px;
+  left: 212px;
+}
+
+.image-frame img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 
 .links-container {
-	position: relative;
-	z-index: 1;
-	display: flex;
-	list-style-type: none;
-	padding: 0;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
 }
 
 .link-item {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	border: 2px solid var(--fontColor);
-	border-radius: 50%;
-	width: 32px;
-	height: 32px;
-	margin-right: 8px;
-	transition: .2s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: 2px solid var(--fontColor);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+  transition: 0.2s;
 }
 
 .link-item:hover {
-	background-color: rgba(212, 211, 211, 0.7);
+  background-color: rgba(212, 211, 211, 0.7);
 }
 
 .link-anchor {
-	width: 24px;
-	height: 24px;
-	margin: auto;
+  width: 24px;
+  height: 24px;
+  margin: auto;
 }
 
 .link-anchor svg {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  stroke: var(--fontColor);
+  fill: var(--fontColor);
+}
+
+.link-anchor svg.email {
+  fill: none;
 }
 
 :root {
-	--fontColor: rgba(39, 39, 39, 1);
+  --fontColor: #f9f9f9;
 }
