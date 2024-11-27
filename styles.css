@@ -2,6 +2,11 @@ body {
   background-color: #1b1926;
   color: var(--fontColor);
   font-family: "Work Sans", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
 .header {
@@ -16,8 +21,7 @@ body {
   box-sizing: border-box;
   width: 100%;
   max-width: 248px;
-  padding: 12px;
-  margin: 24px auto;
+  padding: 12px 12px 228px;
   position: relative;
   background-image: url("./background.png");
   background-size: 106%;
